@@ -67,3 +67,6 @@ CLI를 사용할 줄 알면 GUI도 사용할 수 있지만 반대는 성립하�
 ### 1-7. Git 도움말
 ---
 [본문 링크](https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EB%8F%84%EC%9B%80%EB%A7%90-%EB%B3%B4%EA%B8%B0)
+
+## 2. Git의 기초
+### Git 저장소 만들기
