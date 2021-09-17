@@ -141,6 +141,65 @@ $ git reset HEAD <file>
 
 #### Modified -> Unmodified
 $ git checkout -- <file>
-  
+
 ### 2-5. 리모트 저장소
 ---
+리모트 저장소는 인터넷이나 네트워크 어딘가에 있는 저장소를 말한다.   
+리모트 저장소를 관리하면서 데이터를 거기에 Push 하고 Pull 하며 다른 사람들과 함께 일할 수 있다.
+
+#### 리모트 저장소 확인하기
+$ git remote (-v)
+
+#### 리모트 저장소 추가하기
+$ git remote add <단축이름> <url>
+
+#### 리모트 저장소의 데이터 가져오기
+$ git fetch <remote>   
+fetch는 데이터를 로컬로 가져오긴 하지만 자동으로 merge하지 않는다(수동으로 merge 필요).   
+대신 pull은 자동으로 로컬 브랜치와 merge해준다.
+
+#### 리모트 저장소에 Push 하기
+$ git push <리모트 저장소 이름> <브랜치 이름>   
+
+##### Push가 가능한 경우
+1. clone한 리모트 저장소에 쓰기 권한이 있다.
+2. Clone 하고 난 이후 아무도 Upstream 저장소에 Push 하지 않은 상태일 때.
+3. 2의 반대 경우 다른 사람의 작업을 Merge한 후 Push 가능.
+
+#### 리모트 저장소 살펴보기
+$ git remote show <리모트 저장소 이름>
+
+#### 리모트 저장소 이름 바꾸기
+$ git remote rename 원래이름 바꿀이름
+
+#### 리모트 저장소를 삭제하기
+$ git remote remove <리모트 저장소 이름>
+
+### 2.6 태그
+---
+#### 태그 조회하기
+$ git tag
+
+#### 태그 붙이기
+##### Lightweight 태그
+브랜치와 비슷한데 브랜치처럼 가리키는 지점을 최신 커밋으로 이동시키지 않는다.   
+단순히 특정 커밋에 대한 포인터일 뿐이다.   
+ex) $ git tag v1.4-lw
+
+##### Annotated 태그
+Git 데이터베이스에 태그를 만든 사람의 이름, 이메일과 태그를 만든 날짜, 그리고 태그 메시지도 저장한다.   
+ex) $ git tag -a v1.4 -m "my version 1.4"
+
+#### 태그 공유하기
+Push는 자동으로 태그를 보내지 않는다.   
+$ git push origin <tag>
+
+#### 태그를 Checkout 하기
+특정 버전의 파일을 Checkout하고 싶을 때   
+$ git checkout <tag>
+
+### 2.7 Git Alias
+---
+$ git config --global alias.<alias> <명령>
+
+## 3. Git 브랜치
