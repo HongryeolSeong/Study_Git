@@ -69,7 +69,7 @@ CLI를 사용할 줄 알면 GUI도 사용할 수 있지만 반대는 성립하�
 [본문 링크](https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EB%8F%84%EC%9B%80%EB%A7%90-%EB%B3%B4%EA%B8%B0)
 
 ## 2. Git의 기초
-### 2-1. Git 저장소 만들기
+### 2-1. Git 저장소 만들기(Git Bash 활용)
 ---
 #### 1. 기존 디렉토리를 Git 저장소로 만들기
 1. 작업 폴더 생성
@@ -77,4 +77,70 @@ CLI를 사용할 줄 알면 GUI도 사용할 수 있지만 반대는 성립하�
 3. 이후 스테이징 및 커밋 작업
 
 #### 2. 기존 저장소를 Clone 하기
-$ git clone "Git 저장소 주소"
+$ git clone "Git 저장소 주소" ("지정할 디렉토리명")
+
+### 2-2. 수정하고 저장소에 저장하기
+---
+#### 워킹 디렉토리 속 파일의 종류
+1. Tracked -  Unmodified, Modified, Staged
+2. Untracked
+<br>
+
+#### 파일의 라이프 사이클
+![사이클](https://git-scm.com/book/en/v2/images/lifecycle.png)
+
+#### 파일 상태 확인
+$ git status
+
+#### 파일 추적하기
+$ git add <file>   
+Untracked -> Tracked(Staged) or Tracked(Modified) -> Tracked(Staged)   
+git add 후 파일 수정시 git add 다시 한 후 커밋할 것
+
+#### 파일의 상태 간단하게 확인
+$ git status -s or --short
+
+#### 파일 무시하기
+.gitignore 파일 생성 후 내용 기입
+
+#### Staged와 Unstaged 상태의 변경 내용을 확인
+$ git diff
+
+#### 변경사항 커밋하기
+1. $ git commit
+2. i 입력 후 커밋 메세지 작성
+3. :wq 타이핑 하여 저장 후 vim 종료
+4. 커밋 완료 메세지 확인
+   
+or  
+
+$ git commit -m "Story 182: Fix benchmarks for speed" 와 같이 인라인으로 메세지 첨부 가능
+
+#### 파일 삭제하기
+Git에서 파일 제거시   
+$ git rm <file> 을 통해 Staging Area에서 해당 파일 삭제 후 커밋할 것   
+실제 파일도 삭제 된다.
+
+#### 파일 이름 변경하기
+$ git mv 원래이름 바꿀이름
+
+### 2-3. 커밋 히스토리 조회하기
+---
+$ git log   
+-p or --patch : 각 커밋의 diff 결과를 보여줌   
+--stat : 각 커밋의 통계 정보   
+--pretty : 여러 형식으로 커밋 히스토리 출력
+
+### 2-4. 되돌리기
+---
+$ git commit --amend   
+이전 커밋을 덮어서 보낼 수 있다.
+
+#### Staged -> Unstaged
+$ git reset HEAD <file>
+
+#### Modified -> Unmodified
+$ git checkout -- <file>
+  
+### 2-5. 리모트 저장소
+---
