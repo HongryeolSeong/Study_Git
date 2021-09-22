@@ -369,6 +369,7 @@ origin/master 포인터의 위치를 최신 커밋으로 이동시킨다.
 $ git push 저장소이름 브랜치이름
 
 #### Pull하기
+$ git pull 저장소이름   
 Pull = Fetch + Merge 이다.   
 일반적으로 fetch 와 merge 명령을 명시적으로 사용하는 것이 pull 명령으로 한번에 두 작업을 하는 것보다 낫다.   
    
