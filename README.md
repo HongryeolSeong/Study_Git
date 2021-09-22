@@ -364,9 +364,9 @@ origin/master 포인터의 위치를 최신 커밋으로 이동시킨다.
 ![사진15](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/15.png)   
 
 #### Push하기
+$ git push 저장소이름 브랜치이름   
 로컬 저장소의 브랜치는 자동으로 리모트 저장소로 전송되지 않는다.   
 명시적으로 브랜치를 Push 해야 정보가 전송된다.   
-$ git push 저장소이름 브랜치이름
 
 #### Pull하기
 $ git pull 저장소이름   
