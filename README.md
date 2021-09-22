@@ -334,3 +334,42 @@ $ git branch
 <br>
 
 ### 3-5. 리모트 브랜치
+---
+#### 리모트 Refs
+리모트 저장소에 있는 포인터인 레퍼런스다.   
+리모트 저장소에 있는 브랜치, 태그, 등등을 의미한다.   
+$ git ls-remote [remote] 로 모든 리모트 Refs를 조회할 수 있다.   
+   
+하지만 보통은 리모트 트래킹 브랜치를 사용한다.
+
+#### 리모트 트래킹 브랜치
+리모트 브랜치를 추적하는 레퍼런스이며 브랜치다.   
+임의로 움직일 수 없고, 자동으로 갱신될 뿐이다.   
+remote/branch 형식으로 되어 있다.   
+   
+예제 - 한 저장소를 로컬에 clone시
+1. git은 자동으로 origin이라는 이름을 붙인다.
+2. origin으로부터 저장소 데이터를 모두 내려받는다.
+3. default 브랜치인 master를 가리키는 포인터를 만든다.
+4. 3의 포인터는 origin/master이고 로컬의 master가 이 것을 가리키게 한다.   
+
+![사진14](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/14.png)   
+
+#### 리모트 서버와 동기화
+$ git fetch origin   
+현재 로컬의 저장소가 갖고 있지 않은 새로운 정보가 있으면 모두 내려받고,   
+받은 데이터를 로컬 저장소에 업데이트하고 나서,   
+origin/master 포인터의 위치를 최신 커밋으로 이동시킨다.   
+   
+![사진15](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/15.png)   
+
+#### Push하기
+로컬 저장소의 브랜치는 자동으로 리모트 저장소로 전송되지 않는다.   
+명시적으로 브랜치를 Push 해야 정보가 전송된다.   
+$ git push 저장소이름 브랜치이름
+
+#### Pull하기
+Pull = Fetch + Merge 이다.   
+일반적으로 fetch 와 merge 명령을 명시적으로 사용하는 것이 pull 명령으로 한번에 두 작업을 하는 것보다 낫다.   
+   
+   
