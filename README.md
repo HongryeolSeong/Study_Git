@@ -245,18 +245,18 @@ Git의 브랜치는 커밋 사이를 가볍게 이동할 수 있는 어떤 포�
 $ git branch 브랜치   
 생성과 동시에 마지막 커밋을 가리키게 된다.   
 
-사진 2   
+![사진2](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/2.png)   
 
 #### 브랜치 이동하기
 $ git checkout 브랜치   
 
-사진 3   
+![사진3](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/3.png)   
 HEAD가 이제 testing을 가리킴을 볼 수 있다.   
 
-사진 4
+![사진4](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/4.png)   
 한 번 커밋 후 확인시 여전히 HEAD는 testing을 가리키고 있다.
 
-사진 5   
+![사진5](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/5.png)   
 HEAD를 master로 옮긴 후 커밋하면 다음과 같이 나옴을 볼 수 있다.
 
 <br>
@@ -277,30 +277,30 @@ HEAD를 master로 옮긴 후 커밋하면 다음과 같이 나옴을 볼 수 있
 3. 수정한 Hotfix 테스트를 마치고 운영 브랜치로 Merge 한다.
 4. 다시 작업하던 브랜치로 옮겨가서 하던 일 진행한다.
 
-사진 6   
+![사진6](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/6.png)   
 현재 작업중인 프로젝트   
 
-사진 7
+![사진7](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/7.png)   
 이슈 95를 처리하기 위한 새 branch인 iss95를 생성   
 
-사진 8   
+![사진8](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/8.png)   
 iss95에서 다른 작업 진행   
 
-사진 9   
+![사진9](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/9.png)   
 급한 문제가 생겨 hotfix를 만들기 위해 master로 이동 후 hotfix 생성하고 새 작업 진행   
 
-사진 10   
+![사진10](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/10.png)   
 문제 해결시킬 hotfix를 master에 merge한다(master로 이동하여 merge할 것).   
 이때 fast-forward방식의 merge를 하게 된다.   
 
-사진 11   
+![사진11](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/11.png)   
 문제가 해결되었으니 hotfix는 지운 후 iss95로 이동한다.   
 
-사진 12   
+![사진12](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/12.png)   
 이슈 95를 처리하기 위한 작업이 끝나 iss95를 master에 merge 시킨다(마찬가지로 master로 이동하여 merge할 것).   
 이때 3-way방식의 merge를 하게 된다.   
 
-사진 13   
+![사진13](https://github.com/HongryeolSeong/Study_Git/blob/main/refimg/13.png)   
 hotfix와 마찬가지로 iss95를 삭제함으로써 이슈 처리를 마무리한다.   
 
 <br>
