@@ -4,5 +4,5 @@
 ## 1. 기초
 [링크 👈](https://github.com/HongryeolSeong/Study_Git/tree/main/git_basic)
 
-## 2. 협업 브랜치 모델
+## 2. 브랜치를 활용한 협업 개발 모델
 [링크 👈](https://github.com/HongryeolSeong/Study_Git/tree/main/git_branchmodel)
