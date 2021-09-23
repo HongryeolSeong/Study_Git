@@ -1,5 +1,5 @@
 # Git 협업 개발 모델
-Git 활용시 타 시스템에 비해 branch와 merge 작업이 간단하고 활발히 이루어진다.   
+Git 활용시 타 버전 관리 시스템에 비해 branch와 merge 작업이 간단하고 활발히 이루어진다.   
 그러므로 이를 이용하여 버전 관리를 효율적으로 하도록 한다.   
    
 ![flow](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/main.png)
