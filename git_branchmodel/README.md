@@ -34,10 +34,10 @@ main branch들과는 다르게 수명이 있어 작업이 끝나는 경우 삭�
 
 ### 2-1. Feature branches
 ---
+향후 릴리즈 또는 더 뒤에 올 릴리스의 새 기능을 개발하는데 이용된다.   
+   
 develop로 부터 분기되어야하고,   
 develop에 병합되어야 한다.   
-   
-향후 릴리즈 또는 더 뒤에 올 릴리스의 새 기능을 개발하는데 이용된다.   
 ![사진1-1](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/1-1.png)   
 
 #### 작업 순서
@@ -63,12 +63,12 @@ $ git branch -d feature
 
 ### 2-2. Release branches
 ---
-develop으로 부터 분기되어야하고,   
-develop와 master에 병합되어야 한다.   
-   
 새로운 release를 분기하는 순간은 develop이 새 릴리즈가 준비된 상태의 소스코드일 때 이다.   
 이 때 예정 릴리즈를 대상으로하는 기능은 모두 포함(merge)되어야하고,   
 다음 릴리즈를 대상으로 하는 기능은 다음 release의 분기를 기다려야 한다.   
+   
+develop으로 부터 분기되어야하고,   
+develop와 master에 병합되어야 한다.   
 
 #### 작업 순서
 1. develop에서 새로 분기한다.   
@@ -95,11 +95,11 @@ $ git branch -d release-1.2
 
 ### 2-3. Hotfix branches
 ---
-matser로 부터 분기되어야하고,   
-develop와 master에 병합되어야 한다.   
-   
 갑자기 발생한 live production 문제에 즉시 대처하기위한 branch이다.   
 핵심은 develop에서 팀원들은 작업을 계속할 수 있고, 다른 사람이 빠른 수정안을 준비하고 있다는 것이다.   
+   
+matser로 부터 분기되어야하고,   
+develop와 master에 병합되어야 한다.   
 ![사진8-1](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/8-1.png)   
 
 #### 작업 순서
