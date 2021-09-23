@@ -28,13 +28,15 @@ main branch들과는 다르게 수명이 있어 작업이 끝나는 경우 삭�
 - Release branches
 - Hotfix branches
 
+<br/>
+
 ### 2-1. Feature branches
 ---
 develop로 부터 분기되어야하고,   
 develop에 병합되어야 한다.   
    
 향후 릴리즈 또는 더 뒤에 올 릴리스의 새 기능을 개발하는데 이용된다.   
-사진1-1   
+![사진1-1](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/1-1.png)   
 
 #### 작업 순서
 1. 새 기능 작업 시작시 develop에서 분기후 HEAD를 feature branch로 옮긴다.   
@@ -50,8 +52,12 @@ $ git branch -d feature
 
 참고로 4번에서 병합시 --no-ff를 쓰는 이유는 항상 새로운 커밋 개체를 생성하여   
 커밋 히스토리 추적에 용이하고,   
-기능을 추가한 커밋과 함께 그룹화하기 위함이다.   
-사진1   
+기능을 추가한 커밋과 함께 그룹화하기 위함이다.
+
+#### 결과
+![사진1](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/1.png)   
+
+<br/>
 
 ### 2-2. Release branches
 ---
@@ -74,14 +80,16 @@ $ git checkout master
 $ git merge --no-ff release-1.2   
 5. 태그를 붙인다.   
 $ git tag -a 1.2   
-사진3
+![사진3](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/3.png)   
 6. develop으로 이동하고 병합한다.   
 $ git checkout develop   
 $ git merge --no-ff release-1.2   
-사진4
+![사진4](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/4.png)   
 7. release를 삭제한다.   
 $ git branch -d release-1.2   
-사진6
+![사진6](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/6.png)   
+
+<br/>
 
 ### 2-3. Hotfix branches
 ---
@@ -90,7 +98,7 @@ develop와 master에 병합되어야 한다.
    
 갑자기 발생한 live production 문제에 즉시 대처하기위한 branch이다.   
 핵심은 develop에서 팀원들은 작업을 계속할 수 있고, 다른 사람이 빠른 수정안을 준비하고 있다는 것이다.   
-사진8-1
+![사진8-1](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/8-1.png)   
 
 #### 작업 순서
 1. master에서 새로 분기한다.   
@@ -107,18 +115,19 @@ $ git checkout master
 $ git merge --no-ff hotfix-1.2.1   
 7. 태그를 붙인다.   
 $ git tag -a 1.2.1   
-사진8
+![사진8](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/8.png)   
 8. develop으로 이동하고 병합한다.   
 $ git checkout develop   
 $ git merge --no-ff hotfix-1.2.1   
-사진9
+![사진9](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/9.png)   
 9. release를 삭제한다.   
 $ git branch -d hotfix-1.2.1   
-사진10
+![사진10](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/10.png)   
 
 <br/>
 
+## 최종 결과
 위의 모든 작업을 마치고 리모트 저장소에 push한 상태는 다음과 같다.   
-사진12
+![사진12](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/12.png)   
    
    
