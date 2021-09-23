@@ -254,7 +254,7 @@ HEAD가 이제 testing을 가리킴을 볼 수 있다.
 한 번 커밋 후 확인시 여전히 HEAD는 testing을 가리키고 있다.
 
 ![사진5](https://github.com/HongryeolSeong/Study_Git/blob/main/git_basic/refimg/5.png)   
-HEAD를 master로 옮긴 후 커밋하면 다음과 같이 나옴을 볼 수 있다.
+HEAD를 master로 옮긴 후 커밋하면 위와 같이 나옴을 볼 수 있다.
 
 <br>
 
