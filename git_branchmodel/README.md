@@ -130,6 +130,7 @@ $ git branch -d hotfix-1.2.1
 
 ## 최종 결과
 위의 모든 작업을 마치고 리모트 저장소에 push한 상태는 다음과 같다.   
+   
 ![사진12](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/12.png)   
    
    
