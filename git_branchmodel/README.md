@@ -38,6 +38,7 @@ main branch들과는 다르게 수명이 있어 작업이 끝나는 경우 삭�
    
 develop로 부터 분기되어야하고,   
 develop에 병합되어야 한다.   
+   
 ![사진1-1](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/1-1.png)   
 
 #### 작업 순서
@@ -100,6 +101,7 @@ $ git branch -d release-1.2
    
 matser로 부터 분기되어야하고,   
 develop와 master에 병합되어야 한다.   
+   
 ![사진8-1](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/8-1.png)   
 
 #### 작업 순서
