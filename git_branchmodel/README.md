@@ -13,7 +13,7 @@ Git 활용시 타 버전 관리 시스템에 비해 branch와 merge 작업이 �
 HEAD의 소스코드가 항상 production-ready 상태인 branch.
 
 ### develop
-HEAD의 소스코드가 항상 다음 릴리스에 대한 최신 개발 변경 사항이 적용된 상태인 branch.
+HEAD의 소스코드가 항상 다음 릴리즈에 대한 최신 개발 변경 사항이 적용된 상태인 branch.
 
 <br/>
 
@@ -34,7 +34,7 @@ main branch들과는 다르게 수명이 있어 작업이 끝나는 경우 삭�
 
 ### 2-1. Feature branches
 ---
-향후 릴리즈 또는 더 뒤에 올 릴리스의 새 기능을 개발하는데 이용된다.   
+향후 릴리즈 또는 더 뒤에 올 릴리즈의 새 기능을 개발하는데 이용된다.   
    
 develop로 부터 분기되어야하고,   
 develop에 병합되어야 한다.   
