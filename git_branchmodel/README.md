@@ -41,7 +41,7 @@ develop에 병합되어야 한다.
    
 ![사진1-1](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/1-1.png)   
 
-#### 작업 예제
+#### - 작업 예제
 1. 새 기능 작업 시작시 develop에서 분기후 HEAD를 feature branch로 옮긴다.   
 $ git checkout -b feature develop
 2. 새 기능 작업을 한다.
@@ -71,7 +71,7 @@ $ git branch -d feature
 develop으로 부터 분기되어야하고,   
 develop와 master에 병합되어야 한다.   
 
-#### 작업 예제
+#### - 작업 예제
 1. develop에서 새로 분기한다.   
 $ git checkout -b release-1.2 develop
 2. 작업본이 새 버전을 반영하도록 한다.   
@@ -104,7 +104,7 @@ develop와 master에 병합되어야 한다.
    
 ![사진8-1](https://github.com/HongryeolSeong/Study_Git/blob/main/git_branchmodel/refimg/8-1.png)   
 
-#### 작업 예제
+#### - 작업 예제
 1. master에서 새로 분기한다.   
 $ git checkout -b hotfix-1.2.1 master
 2. 작업본이 새 버전을 반영하도록 한다.   
